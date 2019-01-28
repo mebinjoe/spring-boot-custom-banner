@@ -1,8 +1,11 @@
 package app.service;
 
+import org.springframework.stereotype.Service;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 
+@Service
 public class UriService {
     public URI appendUri(String uri, String appendQuery) throws URISyntaxException {
         URI oldUri = new URI(uri);

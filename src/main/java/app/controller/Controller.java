@@ -16,7 +16,7 @@ public class Controller {
     @Autowired
     UriService uriService;
 
-    @PostMapping(path="renderBanner")
+    @PostMapping(path="renderBanner", produces="text/plain")
     private void renderBanner(@RequestBody Map<String, String> payload) {
         if (payload != null){
             String text = payload.get("text");
